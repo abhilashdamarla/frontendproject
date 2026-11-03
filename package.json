@@ -1,3 +1,4 @@
+
 {
   "name": "fedprojectreact",
   "private": true,
@@ -6,9 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:github": "vite build --base=/router-demo/",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build:github && gh-pages -d dist"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -18,12 +19,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-}
+  }
 }
